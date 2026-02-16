@@ -148,11 +148,6 @@ class Disable_Blog_Deactivator {
 	 * @return bool false if no caps, else true.
 	 */
 	private static function check_caps() {
-
-		if ( current_user_can( 'activate_plugins' ) ) {
-			return true;
-		}
-
-		return false;
+		return current_user_can( 'activate_plugins' );
 	}
 }
